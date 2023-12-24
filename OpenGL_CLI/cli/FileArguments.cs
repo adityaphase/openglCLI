@@ -3,7 +3,7 @@ using OpenTK.Graphics.OpenGL;
 
 namespace OpenGL_CLI
 {
-    public class FileArguments : Program
+    public class FileArguments : OpenglCLI
     {
         private static string finalFilePath = string.Empty;
         public static string FinalFilePath
