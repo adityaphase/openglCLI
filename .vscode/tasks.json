@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "copyFile",
+            "command": "/bin/cp",
+            "args": [
+                "${workspaceFolder}/OpenGL_CLI/shader/shader.vert", // Specify the path to your specific file
+                "${workspaceFolder}/OpenGL_CLI/bin/Debug/net8.0/" // Specify the output directory
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
