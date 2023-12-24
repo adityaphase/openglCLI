@@ -50,7 +50,8 @@ namespace OpenGL_2D
             ElementBufferObject.FetchData(indices, indices.Length);
 
             //shader = new Shader("shader.vert", "shader.frag");
-            shader = new Shader("shader.vert", FileManage.FragFileNameReturn());
+            shader = new Shader(FileManage.VertFileNameReturn(), 
+                FileManage.FragFileNameReturn());
 
             shader.Use();
         }
