@@ -8,5 +8,10 @@ namespace OpenGL_2D
         {
             return FinalFilePath;
         }
+
+        public static string VertFileNameReturn()
+        {
+            return System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "shader.vert");
+        }
     }
 }
