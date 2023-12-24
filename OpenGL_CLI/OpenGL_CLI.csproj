@@ -10,5 +10,10 @@
   <ItemGroup>
     <PackageReference Include="opentk" Version="4.8.2" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="shader/shader.vert">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
