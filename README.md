@@ -1,7 +1,7 @@
 Command line interface for running shaders written in GLSL.</br>
 Options:</br>
 ```
--f <path to shader fragment file> : Input file
+-f <path to fragment shader file> : Input file
 -d                                : docs
 -h                                : help
 ```
