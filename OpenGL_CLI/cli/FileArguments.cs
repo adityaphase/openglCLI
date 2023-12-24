@@ -1,4 +1,5 @@
 using OpenGL_2D;
+using OpenTK.Graphics.OpenGL;
 
 namespace OpenGL_CLI
 {
@@ -22,7 +23,16 @@ namespace OpenGL_CLI
             {
                 if (arg[1] == 'h')
                 {
-                    Console.WriteLine("Help:\n -h: help\n -f path to file\n");
+                    Console.WriteLine("Help:\n -h: help\n -f path to file\n -d documentation");
+                }
+                else if (arg[1] == 'd')
+                {
+                    Console.WriteLine
+                    (
+                        "\nFragment shader file will output a vec4 \"FragColor\"\n"+
+                        "Define a uniform vec2 resolution for fetching current render resolution\n"+
+                        "Define a uniform float time for time based shader math\n"
+                    );
                 }
                 else if (arg[1] == 'f')
                 {
