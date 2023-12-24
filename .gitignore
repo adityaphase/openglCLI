@@ -1,2 +1,4 @@
 /OpenGL_CLI/bin/
 /OpenGL_CLI/obj/
+.DS_Store
+/OpenGL_CLI/.DS_Store
