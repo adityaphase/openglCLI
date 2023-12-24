@@ -1,4 +1,4 @@
-Command line interface for running shaders written in GLSL.</br>
+Command line interface for running shaders written in GLSL (for shader art coding).</br>
 Options:</br>
 ```
 -f <path to fragment shader file> : Input file
