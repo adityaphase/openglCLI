@@ -2,7 +2,7 @@
 
 namespace OpenGL_CLI
 {
-    public class OpenglCLI
+    public class OpenglCLI //lol
     {
         public static bool checkArgException = false;
         public static bool checkIfExceptionRaised = false;
