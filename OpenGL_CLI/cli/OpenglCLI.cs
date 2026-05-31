@@ -29,12 +29,15 @@ namespace OpenGL_CLI
                 string userArgSelect = args[0];
                 string userArgData = args[1];
 
+                int width = 800;
+                int height = 800;
+
                 if (!string.IsNullOrEmpty(userArgSelect))
                 {
                     try
                     {
                         FileArguments.FileArgs(userArgSelect, userArgData);
-                        Renderer.RendererWindow();
+                        Renderer.RendererWindow(width, height);
                     }
                     catch (Exception Ex)
                     {

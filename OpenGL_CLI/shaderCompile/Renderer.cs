@@ -14,9 +14,9 @@ namespace OpenGL_2D
 {
     public class Renderer
     {
-        public static void RendererWindow()
+        public static void RendererWindow(int width, int height)
         {
-            using (RenderWindow renderWindow = new RenderWindow(800, 800, "RenderOutput"))
+            using (RenderWindow renderWindow = new RenderWindow(width, height, "RenderOutput"))
             {
                 renderWindow.Run();
             }

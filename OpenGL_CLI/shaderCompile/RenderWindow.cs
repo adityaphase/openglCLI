@@ -1,4 +1,5 @@
-﻿using OpenTK.Graphics.OpenGL4;
+﻿using Microsoft.VisualBasic;
+using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
@@ -21,6 +22,9 @@ namespace OpenGL_2D
         private VertexArrayObj VertexArrayObject;
         private InBuffer ElementBufferObject;
         private Shader shader;
+
+        private static int w;
+        private static int h;
 
         private readonly uint[] indices = new uint[]
         {
@@ -60,13 +64,19 @@ namespace OpenGL_2D
         {
             base.OnRenderFrame(e);
 
+            w = FramebufferSize.X;
+            h = FramebufferSize.Y;
+
             GL.Clear(ClearBufferMask.ColorBufferBit);
             shader.Use();
 
             double someTime = GLFW.GetTime();
 
             int sendResolution = GL.GetUniformLocation(shader.Handle, "u_resolution");
-            GL.Uniform2(sendResolution, this.Width, this.Height);
+            //render window offset fix
+            GL.Viewport(0, 0, w, h);
+            GL.Uniform2(sendResolution, (float)w, (float)h);
+
             int sendTime = GL.GetUniformLocation(shader.Handle, "u_time");
             GL.Uniform1(sendTime, (float)someTime);
 
@@ -79,7 +89,8 @@ namespace OpenGL_2D
         protected override void OnResize(ResizeEventArgs e)
         {
             base.OnResize(e);
-            GL.Viewport(0, 0, Size.X, Size.Y);
+            GL.Viewport(0, 0, w, h); //render midpoint offset fix
+
         }
 
         protected override void OnUpdateFrame(FrameEventArgs e)
