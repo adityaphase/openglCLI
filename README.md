@@ -19,7 +19,4 @@ Changelog:
 
 Screenshots:
 shaderwaves2:
-![Screenshot](images/waves.png)
-
-shader2:
-![Screenshot](images/screensaver_pattern.png)
+![Screenshot](images/waves.gif)
