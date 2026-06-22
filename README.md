@@ -17,6 +17,7 @@ Changelog:
 
 - Fixed render window coordinates being offset from centre.
 
-Screenshots:
+Demo:
 shaderwaves2:
+
 ![Screenshot](images/waves.gif)
